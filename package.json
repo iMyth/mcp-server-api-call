@@ -1,0 +1,44 @@
+{
+  "name": "mcp-server-wom-call",
+  "version": "0.0.5",
+  "description": "MCP Server for Work Order Management System Integration",
+  "type": "module",
+  "main": "./dist/index.js",
+  "bin": {
+    "mcp-server-wom-call": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && node scripts/postbuild.js",
+    "dev": "tsc --watch",
+    "start": "node build/index.js",
+    "prepublishOnly": "npm run build",
+    "test:local": "node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "work-order",
+    "wom",
+    "ticket",
+    "esb",
+    "model-context-protocol"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.1",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
